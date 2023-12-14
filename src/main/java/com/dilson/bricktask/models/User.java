@@ -1,7 +1,10 @@
 package com.dilson.bricktask.models;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,7 +16,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity(name="users")
+@Entity(name = "users")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -33,4 +36,7 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<Task> tasks = new ArrayList<Task>();
+
+    @CreationTimestamp
+    private LocalDateTime date;
 }
