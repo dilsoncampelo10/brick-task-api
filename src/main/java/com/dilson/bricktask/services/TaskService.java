@@ -2,7 +2,7 @@ package com.dilson.bricktask.services;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
+
 
 import com.dilson.bricktask.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
